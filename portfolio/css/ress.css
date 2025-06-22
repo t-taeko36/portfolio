@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  word-break: normal;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  background-repeat: no-repeat;
+}
+
+::before,
+::after {
+  vertical-align: inherit;
+  text-decoration: inherit;
+}
+
+hr {
+  overflow: visible;
+  height: 0;
+}
+
+details,
+main {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+small {
+  font-size: 80%;
+}
+
+[hidden] {
+  display: none;
+}
+
+abbr[title] {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+  border-bottom: none;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #1ca9e3;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+}
+
+pre {
+  font-size: 1em;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/*  # Specify media element style
+---------------------------------*/
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+  display: block;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+/* Forms
+---------------------------------*/
+
+input {
+  border-radius: 0;
+}
+
+[disabled] {
+  cursor: default;
+}
+
+[type="number"]::-webkit-container-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px; 
+  -webkit-appearance: textfield;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+  color: inherit;
+}
+
+button::-moz-focus-container,
+[type="button"]::-moz-focus-container,
+[type="reset"]::-moz-focus-container,
+[type="submit"]::-moz-focus-container {
+  padding: 0;
+  border-style: none;
+}
+
+button:-moz-focusring,
+[type="button"]::-moz-focus-container,
+[type="reset"]::-moz-focus-container,
+[type="submit"]::-moz-focus-container {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button,
+input,
+select,
+textarea {
+  border-style: none;
+  background-color: transparent;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select::-ms-value {
+  color: currentColor;
+}
+
+legend {
+  display: table;
+  max-width: 100%;
+  max-width: 100%;
+  white-space: normal;
+  color: inherit;
+  border: 0;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  color: inherit;
+  -webkit-appearance: button;
+}
+/*  # Accessibility
+---------------------------------*/
+
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-disabled] {
+  cursor: default;
+}
