@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+figure,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+/*clearfix-------------------------------*/
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*splide リセットCSS-------------------------------*/
+.splide__pagination.splide__pagination--ltr {
+    display: none;
+  }
+  .splide__arrow.splide__arrow--prev {
+    display: none;
+  }

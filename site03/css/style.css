@@ -1,0 +1,717 @@
+@charset "utf-8";
+/* ブレイクポイント1000px,960px,375px */
+
+body{
+  font-family: "Times New Roman", "YuMincho", "游明朝体", "Yu Mincho","游明朝", "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", "Yu Mincho", "MS PMincho", "ＭＳ Ｐ明朝", serif;
+  background-color: #fff;
+  letter-spacing: 0.1em;
+}
+
+/* h p small
+------------------------------*/
+h1{
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+h2{
+  font-size: 4.0rem;
+  font-weight: normal;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  color: #04581b;
+}
+h3{
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: #04581b;
+}
+p{
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 28px;
+  text-align: justify;
+}
+
+/* a btn
+------------------------------*/
+a{
+  font-size: 1.6rem;
+}
+a.btn{
+  width: 200px;
+  padding: 24px;
+  line-height: 0;
+  text-align: center;
+  border: 1px solid #d3b64f;
+  background-color: #fff;
+  color: #04581b;
+}
+.btn-contact{
+  width: 200px;
+  padding: 24px;
+  line-height: 0;
+  text-align: center;
+  background-color: #04581b;
+  color: #fff;
+}
+.btn-more {
+  margin-bottom: 40px;
+}
+.splide__arrow--next,
+.btn-more a {
+  width: 120px;
+  position: relative;
+  padding: 0 0 0 10px;
+  color: #04581b;
+  text-transform: uppercase;
+}
+.splide__arrow--next{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.splide__arrow--next::before,
+.splide__arrow--next::after,
+.btn-more a::before,
+.btn-more a::after{
+  content: '';
+  position: absolute;
+  background-color: #d3b64f;
+  height: 1px;
+  transition: all .3s;
+}
+.splide__arrow--next::before,
+.btn-more a::before {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.splide__arrow--next::after,
+.btn-more a::after {
+  bottom: 4px;
+  right: 0;
+  width: 16px;
+  transform: rotate(30deg);
+}
+
+
+/* a btn hover
+------------------------------*/
+@media (hover:hover) {
+  a:hover{
+    opacity: 0.6;
+  }
+  input.form-btn:hover{
+    opacity: 0.6;
+  }
+.btn-more a:hover::before{
+  left: 10%;
+}
+.btn-more a:hover::after{
+  right: -10%;
+}
+.splide__arrow--next:hover::before{
+  left: 10%;
+}
+.splide__arrow--next:hover::after{
+  right: -10%;
+}
+}
+
+/* .wrapper .container
+------------------------------*/
+.wrapper {
+  overflow: hidden;
+}
+.container {
+  max-width: 900px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .container{
+  margin-bottom: 200px;
+}
+.contants {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+}
+.contants-left {
+  margin-left: calc(50% - 50vw);
+  padding-left: calc(50% - 50vw);
+}
+.contants-left-space {
+  margin-left: calc(50% - 50vw);
+  padding-left: calc(50vw - 50%);
+}
+.contants-right {
+  margin-right: calc(50% - 50vw);
+  padding-right: calc(50% - 50vw);
+}
+.contants-right-space {
+  margin-right: calc(50% - 50vw);
+  padding-right: calc(50vw - 50%);
+}
+
+/* header
+------------------------------*/
+div.menu{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.2);
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 a{
+  color: #fff;
+}
+header nav.global ul{
+  display: flex;
+  justify-content: space-between;
+}
+header nav.global ul li{
+  margin-left: 20px;
+}
+header nav.global ul li a{
+  color: #fff;
+}
+
+/* main .hero
+------------------------------*/
+/* .hidden {
+  display: none;
+} */
+main div div.hero{
+  height: 640px;
+  margin-bottom: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+main div.hero section h2{
+  font-size: 2.4rem;
+}
+main div.hero section h2,
+main div.hero section p{
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+}
+
+/* main .topic
+------------------------------*/
+main div.topic section{
+  margin-bottom: 40px;
+}
+main div.topic section h2{
+  border-bottom: 1px solid #d3b64f;
+}
+main div.topic section ul{
+  display: flex;
+  justify-content: flex-start;
+  letter-spacing: 0;
+}
+main div.topic section ul li{
+  width: 100%;
+  padding-right: 40px;
+}
+main div.topic section ul li a{
+  color: #333;
+}
+main div.topic section ul li a p img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* main .message
+------------------------------*/
+main section.message{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 200px;
+  background-image: url(../images/message.jpg);
+  background-color:rgba(255,255,255,0.9);
+  background-blend-mode:lighten;
+  background-position: center center;
+  background-size: cover;
+}
+main section.message h2,
+main section.message p{
+  text-align: center;
+  line-height: 4rem;
+}
+
+/* main .about-us
+------------------------------*/
+main div.about-us div{
+  display: flex;
+  justify-content: space-between;
+}
+main div.about-us div article{
+  max-width: 300px;
+  margin-left: 40px;
+  text-align: right;
+  border-right: 1px solid #d3b64f;
+  order: 1;
+}
+main div.about-us div article h2{
+  border-bottom: 1px solid #d3b64f;
+  position: relative;
+}
+main div.about-us div article h2::after {
+  position: absolute;
+  top: -120px;
+  left: 100%;
+  color: #eee;
+  font-size: 48px;
+  line-height: 60px;
+  content: '私たちについて';
+}
+main div.about-us div article section{
+  margin-bottom: 40px;
+}
+main div.about-us div p img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  order: 0;
+}
+
+/* main .service
+------------------------------*/
+main div.service div{
+  display: flex;
+  justify-content: space-between;
+}
+main div.service div article{
+  max-width: 300px;
+  margin-right: 40px;
+  border-left: 1px solid #d3b64f;
+}
+main div.service div article h2::before {
+  position: absolute;
+  top: -120px;
+  right: 100%;
+  color: #eee;
+  font-size: 48px;
+  line-height: 60px;
+  content: '事業について';
+}
+main div.service div article h2{
+  border-bottom: 1px solid #d3b64f;
+  position: relative;
+}
+main div.service div article section{
+  margin-bottom: 40px;
+}
+main div.service div p img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* main .plan
+------------------------------*/
+main div.plan article{
+  padding-bottom: 80px;
+  background-color: #fff;
+  border-right: 1px solid #d3b64f;
+}
+main div.plan article h2 {
+  border-bottom: 1px solid #d3b64f;
+  position: relative;
+}
+main div.plan article h2::after {
+  position: absolute;
+  top: -120px;
+  left: 100%;
+  color: #eee;
+  font-size: 48px;
+  line-height: 60px;
+  content: '思い出に残る瞬間を';
+}
+main div.plan article div {
+  padding-top: 80px;
+  display: grid;
+  grid-auto-rows: 320px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+main div.plan article div section h3 {
+  position: relative;
+  padding-left: 40px;
+  line-height: 0.8em;
+}
+main div.plan article div section h3::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 4px solid #d3b64f;
+  color: #04581b;
+  font-size: 14px;
+  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  white-space: pre;
+  content: 'Produce By Scene';
+}
+main div.plan article div section h3 span{
+  font-size: 1.4rem;
+}
+main div.plan article div section a p img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+main div.plan a.btn-contact{
+  margin-bottom: 10px;
+}
+
+/* main .place
+------------------------------*/
+main div.place article{
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-bottom: 80px;
+  border-top: 1px solid #04581b;
+  border-left: 1px solid #04581b;
+  background-color: #fff;
+}
+main div.place article div section{
+  margin-bottom: 80px;
+}
+main div.place article div section:last-child{
+  margin-bottom: 0;
+}
+main div.place article div section p img{
+  width: 100%;
+  height: 400px;
+}
+main div.place article div section ul{
+  margin-top: -40px;
+  margin-bottom: 80px;
+  margin-left: 80px;
+  display: flex;
+  justify-content: flex-start;
+}
+main div.place article div section ul li{
+  width: 100%;
+  margin-right: 40px;
+}
+main div.place article div section ul li a{
+  color: #333;
+  display: flex;
+  flex-direction: column-reverse;
+}
+main div.place article div section ul li a p img{
+  width: 200px;
+  height: 320px;
+}
+
+/* main news
+------------------------------*/
+main div.news section ul{
+  margin-bottom: 40px;
+}
+main div.news section ul li{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+main div.news section ul li a{
+  color: #333;
+}
+main div.news section ul li a span.number{
+  width: 16rem;
+  margin-right: 20px;
+}
+main div.news section ul li a span.category{
+  padding: 4px 16px;
+  font-size: 1.4rem;
+  background-color: #04581b;
+  color: #fff;
+}
+main div.news section ul li a p{
+  margin-top: 10px;
+}
+
+/* main contact
+------------------------------*/
+.contact{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  border: 1px solid #d3b64f;
+  border-radius: 8px;
+}
+.contact ul.reservation{
+  margin-bottom: 40px;
+}
+.contact ul.reservation li a.btn,
+.contact ul.reservation li a.btn-contact{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.contact p{
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #aaa;
+}
+.contact ul.sns{
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* main company
+------------------------------*/
+main.company{
+  margin-top: 200px;
+}
+
+/* main service
+------------------------------*/
+main.service{
+  margin-top: 200px;
+}
+
+/* main plan
+------------------------------*/
+main.plan{
+  margin-top: 200px;
+}
+
+/* main gallery
+------------------------------*/
+main.gallery{
+  margin-top: 200px;
+}
+main section ul.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+}
+main section ul.gallery li{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 16px;
+  background-size: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.div1 {
+  grid-area: 1 / 1 / 3 / 3;
+  background-image: url(../images/plan_anniversary.jpg);
+}
+.div2 {
+  grid-area: 1 / 3 / 2 / 5;
+  background-image: url(../images/plan_ceremony.jpg);
+}
+.div3 p { grid-area: 2 / 3 / 3 / 4;
+  font-size: 2rem;
+  color: #04581b;
+}
+.div4 { grid-area: 2 / 4 / 4 / 5;
+  background-image: url(../images/plan_delivery.jpg);
+}
+.div5 p { grid-area: 3 / 1 / 4 / 2;
+  font-size: 2rem;
+  color: #04581b;
+}
+.div6 { grid-area: 3 / 2 / 5 / 3;
+  background-image: url(../images/plan_option.jpg);
+}
+.div7 { grid-area: 3 / 3 / 4 / 4;
+  background-image: url(../images/plan_wedding.jpg);
+}
+.div8 { grid-area: 4 / 1 / 5 / 2;
+  background-image: url(../images/topic_order-made.jpg);
+}
+.div9 { grid-area: 4 / 3 / 6 / 5;
+  background-image: url(../images/topic_photo.jpg);
+}
+.div10 { grid-area: 5 / 1 / 6 / 3;
+  background-image: url(../images/about-us.jpg);
+}
+
+/* footer
+------------------------------*/
+footer{
+  background-color: #04581b;
+}
+footer div.container{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer div section{
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer div section h2{
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+footer div section h2 img{
+  width: 200px;
+}
+footer div section p{
+  color: #fff;
+}
+footer div div ul,
+footer div div nav.local ul{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+footer div div ul li,
+footer div div nav.local ul li{
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+footer div div ul li:last-child,
+footer div div nav.local ul li:last-child{
+  margin-right: 0;
+}
+footer div div ul li a,
+footer div div nav.local ul li a{
+  color: #fff;
+}
+footer div div address{
+  margin-bottom: 20px;
+  color: #fff;
+}
+footer div div address p span.link-none {
+  pointer-events: none;
+}
+footer div div small p{
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+
+
+
+
+
+/* @media
+------------------------------*/
+@media screen and (min-width:881px){
+  header div.hamburger{
+    display: none;
+  }
+}
+@media screen and (max-width:880px){
+  header nav.global{
+    display: none;
+  }
+  .splide__track {
+    width: 200%;
+  }
+
+/* script.css hamburgerカスタム
+------------------------------*/
+header nav.global{
+  position: fixed;
+  top: 68px;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255,255,255,0.9);
+  transition: 0.5s;
+}
+.on header nav.global{
+  right: 0;
+}
+header nav.global ul{
+  flex-direction: column;
+  gap: 20px;
+}
+header nav.global ul li a {
+  color: #333;
+}
+
+header div.hamburger{
+margin-left: 16px;
+}
+.hamburger-menu {
+width: 24px;
+height: 24px;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+position: relative;
+z-index: 9999;
+}
+.hamburger-line {
+background-color: #fff;
+height: 2px;
+width: 100%;
+}
+.nav-menu li a {
+color: #333;
+padding: 16px 0;
+}
+}
+
+@media screen and (max-width:560px){
+main .container {
+  margin-bottom: 160px;
+}
+main div.about-us div{
+  flex-wrap: wrap;
+}
+main div.about-us div p img{
+  order: 1;
+}
+main div.about-us div article{
+  order: 0;
+  margin-left: auto;
+}
+main div.service div{
+  flex-wrap: wrap;
+}
+main div.about-us div article h2::after,
+main div.service div article h2::before,
+main div.plan article h2::after{
+  top: -120px;
+  font-size: 32px;
+  line-height: 40px;
+}
+main div.plan article div {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+  .splide__track {
+    width: 300%;
+  }
+}
