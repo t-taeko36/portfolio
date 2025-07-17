@@ -1,0 +1,566 @@
+@charset "utf-8";
+
+/* body
+------------------------------*/
+body{
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #f6f4ee;
+}
+
+/* h p
+------------------------------*/
+h1{
+  font-size: 5.6rem;
+  font-weight: bold;
+}
+h2{
+  font-size: 4.0rem;
+  font-weight: bold;
+}
+h3{
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+p{
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 28px;
+}
+small{
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+/* a
+------------------------------*/
+a{
+  font-size: 1.6rem;
+}
+.btn-main,
+.btn-accent,
+.btn-sub{
+  padding: 8px;
+  text-align: center;
+  border-radius: 40px;
+}
+.btn-main{
+  background-color: #f38600;
+  color: #fff;
+}
+.btn-accent{
+  background-color: #2a8c2e;
+  color: #fff;
+}
+.btn-sub{
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+}
+
+/* img
+------------------------------*/
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* wrapper
+------------------------------*/
+.wrapper{
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* container
+------------------------------*/
+.container{
+  padding: 56px 40px 40px;
+}
+.container h2{
+  margin-bottom: 24px;
+  text-align: center;
+}
+.lead{
+  margin-bottom: 32px;
+  text-align: center;
+  color: #f38600;
+}
+
+/* header
+------------------------------*/
+header{
+  padding: 16px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header h1 a img{
+  max-width:  256px;
+}
+header nav.global ul{
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+header nav.global ul li a{
+  margin-left: 24px;
+  color: #333;
+}
+header nav.global ul li:last-child a{
+  width: 96px;
+  padding: 8px 16px;
+  margin-top: -8px;
+  text-align: right;
+  border: 1px solid #333;
+  border-radius: 50rem;
+  background-image: url(../images/icon_login.jpg);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+
+/* main .hero
+------------------------------*/
+div.column main section.hero{
+  background-color: #f38600;
+  position: relative;
+}
+div.column main section.hero h2 img{
+  width: 100%;
+  margin-left: -24px;
+  position: absolute;
+  top: 8px;
+  /* z-index: 10; */
+}
+div.column main section.hero p img.gift{
+  width: 90%;
+  margin: 160px auto 40px;
+  border: #2a8c2e 2px solid;
+  border-radius: 50rem;
+}
+div.column main section.hero p img.female-gift{
+  width: 60%;
+  position: absolute;
+  bottom: 100px;
+  right: -48px;
+}
+/* 下から section.hero h2 img が表示*/
+.fadeIn{
+  animation-name:fadeInAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/* main .new-item
+------------------------------*/
+div.column main section.new-item h2{
+  margin-bottom: 24px;
+  text-align: center;
+}
+div.column main section.new-item p{
+  line-height: 4.0rem;
+  text-align: center;
+}
+/*  loop_wrap（ループするスライダーアニメーション）  */
+.loop_wrap {
+  display: flex;
+  width: 80vh;
+  overflow: hidden;
+}
+.loop_wrap ul{
+  display: flex;
+}
+.loop_wrap ul:first-child {
+  animation: loop 50s -25s linear infinite;
+}
+.loop_wrap ul:last-child {
+  animation: loop2 50s linear infinite;
+}
+.loop_wrap ul li img{
+  width: 200px;
+  margin-top: 16px;
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+/* main .seven-days
+------------------------------*/
+div.column main article.seven-days{
+  background-color: #f6f4ee;
+}
+div.column main article.seven-days section{
+  padding: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #fff;
+  position: relative;
+}
+div.column main article.seven-days section h3{
+  margin-bottom: 16px;
+  color: #f38600;
+}
+div.column main article.seven-days section p img{
+  margin-bottom: 16px;
+}
+div.column main article.seven-days section p img.gift{
+  max-width: 100%;
+  border: 2px solid #2a8c2e;
+  border-radius: 50rem;
+}
+div.column main article.seven-days section p img.female-one-cup{
+  width: 60%;
+  position: absolute;
+  top: 0;
+  left: -30%;
+}
+div.column main article.seven-days section p img.female-two-cup{
+  width: 60%;
+  position: absolute;
+  top: 20px;
+  right: -30%;
+}
+div.column main article.seven-days p img.female-gift{
+  width: 200px;
+  margin: 0 auto;
+}
+div.column main article.seven-days a.btn-accent{
+  margin-bottom: 16px;
+}
+
+/* main .tea
+------------------------------*/
+div.column main section.tea{
+  position: relative;
+}
+div.column main section.tea div.slider img{
+  width: 60%;
+  margin: 0 auto;
+}
+div.column main section.tea p img.female-sit{
+  width: 40%;
+  position: absolute;
+  top: 0;
+  left: -20%;
+}
+
+/* main .how-to
+------------------------------*/
+div.column main section.how-to{
+  background-color: #f6f4ee;
+  position: relative;
+}
+div.column main section.how-to ol li{
+  width: 60%;
+  margin: 0 auto 16px;
+  display: flex;
+}
+div.column main section.how-to ol li p img{
+  width: 100px;
+  margin-right: 16px;
+  border-radius: 50rem;
+}
+div.column main section.how-to ol li p span{
+  color: #f38600;
+}
+div.column main section.how-to p img.female-how-to{
+  width: 40%;
+  position: absolute;
+  top: 160px;
+  right: -15%;
+}
+
+/* main .contact
+------------------------------*/
+div.column main div.contact .btn-accent{
+  margin-bottom: 16px;
+}
+div.column main div.contact p img.female-flower{
+  width: 40%;
+  margin: 0 auto;
+}
+
+/* column
+------------------------------*/
+div.column{
+  display: flex;
+}
+div.column main{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  order: 1;
+  z-index: 1;
+}
+div.column div.left-column,
+div.column div.right-column{
+  flex: 1;
+  height: 100vh;
+  position: sticky;
+  top: 80px;
+  z-index: 0;
+}
+div.column div.left-column{
+  padding: 160px 0;
+  text-align: center;
+  order: 0;
+}
+div.column div.left-column nav ul li{
+  margin-bottom: 32px;
+}
+div.column div.left-column nav ul li a{
+  color: #888;
+}
+div.column div.left-column nav ul li a img{
+  width: 40%;
+  margin: 0 auto;
+}
+div.column div.left-column nav ul li a span{
+  font-size: 1.4rem;
+}
+div.column div.right-column{
+  order: 2;
+}
+
+/* div.left-column アニメーション */
+/*スタート時は要素自体を透過0にするためのopacity:0;を指定する*/
+.box{
+  opacity: 0;
+}
+/*ふわっ*/
+.fadeUp {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+/* アニメーションスタートの遅延時間を決めるCSS*/
+.delay-time02{
+animation-delay: 0.2s;
+}
+.delay-time04{
+  animation-delay: 0.4s;
+}
+.delay-time06{
+  animation-delay: 0.6s;
+}
+
+/* contact
+------------------------------*/
+form {
+  max-width: 480px;
+  padding: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+form div.login_form_top h2{
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+form div.login_form_btm {
+  width: 100%;
+  padding: 40px;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+form div.login_form_btm input{
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #2a8c2e;
+  border-radius: 50rem;
+}
+form div.login_form_btm input:last-child{
+  margin-bottom: 0;
+}
+form input.btn-sub{
+  width: 100%;
+}
+
+/* privacy-policy
+------------------------------*/
+article.privacy-policy {
+  max-width: 640px;
+  padding: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+article.privacy-policy h2{
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+article.privacy-policy section h3{
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+
+/* footer
+------------------------------*/
+footer{
+  padding: 40px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+footer section h2 img{
+  max-width: 400px;
+  margin: 0 auto 16px;
+}
+footer section div.sns{
+  margin-bottom: 16px;
+}
+footer section div.sns p{
+  margin-bottom: 16px;
+  font-size: 40px;
+}
+footer section div.sns ul{
+  max-width: 160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer section div.sns ul li a{
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+footer nav.local{
+  margin-bottom: 16px;
+}
+footer nav.local ul li a{
+  line-height: 32px;
+  color: #fff;
+}
+
+
+
+
+
+/* hover
+------------------------------*/
+@media (hover:hover) {
+  a:hover{
+    opacity: 0.6;
+  }
+  input.form-btn:hover{
+    opacity: 0.6;
+  }
+}
+
+/* @media
+------------------------------*/
+@media screen and (min-width:881px){
+  header div.hamburger{
+    display: none;
+  }
+}
+@media screen and (max-width:880px){
+div.column main.wrapper{
+  overflow: hidden;
+}
+div.column div.right-column,
+div.column div.left-column{
+  display: none;
+  }
+  header nav.global{
+    position: fixed;
+    top: 77px;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  .on header nav.global{
+    right: 0;
+  }
+  header nav.global ul{
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+div.column main article.seven-days section p span{
+  display: inline-block;
+}
+@media screen and (max-width:560px){
+  .wrapper{
+    max-width: 100%;
+  }
+}
+
+/* script.css hamburgerカスタム
+------------------------------*/
+header div.hamburger{
+  margin-left: 16px;
+}
+.hamburger-menu {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  z-index: 9999;
+}
+.hamburger-line {
+  background-color: #333;
+  height: 2px;
+  width: 100%;
+}
+.nav-menu li a {
+  color: #333;
+  padding: 16px 0;
+}
+
+/* script.css bxslider カスタム
+------------------------------*/
+.bx-wrapper {
+  width: 100%;
+  padding: 16px 0;
+  margin: 0 auto 16px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #f38600;
+}
