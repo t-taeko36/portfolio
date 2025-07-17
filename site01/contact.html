@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="#">
+  <title>毎日健診センター</title>
+  <link rel="icon" href="images/logo.svg">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@600;900&display=swap"
+    rel="stylesheet">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo wrapper">
+      <a href="index.html">
+        <h1>毎日健診センター</h1>
+      </a>
+      <div class="info">
+        <ul>
+          <li><a href="#x">ご予約</a></li>
+          <li><a href="#x">WEB問診</a></li>
+          <li><a href="#x">WEB問診</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class="global">
+      <ul class="wrapper">
+        <li><a href="about.html">私たちについて</a></li>
+        <li><a href="#x">健康診断・検査</a></li>
+        <li><a href="#x">人間ドック</a></li>
+        <li><a href="#x">施設ガイド</a></li>
+        <li><a href="#x">法人・団体の方</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contact-form">
+    <section class="visual_img">
+      <h2>お問い合わせ</h2>
+    </section>
+    <div class="wrapper">
+      <form action="sample.cgi" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <th>法人個人<span class="required">必須</span></th>
+              <td>
+                <input type="radio" name="entity_type" value="individual" id="individual" checked required>
+                <label for="individual">個人</label>
+                <input type="radio" name="entity_type" value="corporate" id="corporate">
+                <label for="corporate">法人</label>
+              </td>
+            </tr>
+            <tr>
+              <th><label for="name">お名前<span class="required">必須</span></label></th>
+              <td><input type="text" name="name" id="name" placeholder="毎日太郎" required></td>
+              <!-- <td><input type="text" name="name" id="name" placeholder="太郎"></td> -->
+            </tr>
+            <tr>
+              <th><label for="furigana">フリガナ<span class="required">必須</span></label></th>
+              <td><input type="text" name="furigana" id="furigana" placeholder="マイニチタロウ" required></td>
+              <!-- <td><input type="text" name="name" id="name" placeholder="タロウ"></td> -->
+            </tr>
+            <tr>
+              <th>性別</th>
+              <td>
+                <input type="radio" name="gender" value="man" id="man">
+                <label for="man">男性</label>
+                <input type="radio" name="gender" value="woman" id="woman">
+                <label for="woman">女性</label>
+              </td>
+            </tr>
+            <tr>
+              <th><label for=""></label>年齢</th>
+              <td><input type="number" step="5"></td>
+              <!-- <th><label for="birthday">生年月日</label></th>
+              <td><input type="date" name="birthday" id="birthday"></td> -->
+            </tr>
+            <tr>
+              <th><label for="mail">メールアドレス<span class="required">必須</span></label></th>
+              <td colspan="2"><input type="text" name="mail" id="mail" required></td>
+            </tr>
+            <tr>
+              <th><label for="re_mail">メールアドレス確認用<span class="required">必須</span></label></th>
+              <td colspan="2"><input type="text" name="re_mail" required></td>
+            </tr>
+            <tr>
+              <th><label for="phone_number">電話番号</label></th>
+              <td><input type="tel" name="phone_number" id="phone_number"></td>
+            </tr>
+            <tr>
+              <th><label for="re_phone_number">電話番号確認用</label></th>
+              <td><input type="tel" name="re_phone_number"></td>
+            </tr>
+            <tr>
+              <th>お問い合わせ種別</th>
+              <td>
+                <select name="#">
+                  <option>選択してください</option>
+                  <option value="#">健康診断について</option>
+                  <option value="#">人間ドックについて</option>
+                  <option value="#">区民健診について</option>
+                  <option value="#">企業健診について</option>
+                  <option value="#">検査結果について</option>
+                  <option value="#">採用について</option>
+                  <option value="#">ご意見ご感想</option>
+                  <option value="#">その他</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th><label for="comment">お問い合わせ内容<span class="required">必須</span></label></th>
+              <td colspan="2">
+                <textarea name="comment" id="comment" rows="6" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label><input type="checkbox" name="consent" id="consent" required>個人情報の取り扱いに同意します。</label>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="submit" value="送信" class="form-btn">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <aside>
+        <ul>
+          <li><a href="#x">よくある質問</a></li>
+          <li><a href="#x">資料ダウンロード</a></li>
+          <li><a href="#x">ご予約済みの方へ</a></li>
+          <li><a href="#x">受診済みの方へ</a></li>
+          <li><a href="#x">再検査の方へ</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <div class="wrapper">
+      <section>
+        <h2>毎日健診センター</h2>
+        <address>
+          <p>〒123-4567<br>東京都新宿区1-23-4 タワー3F</p>
+          <p>TEL<span>03-1122-3344</span></p>
+        </address>
+      </section>
+      <nav class="local">
+        <ul>
+          <li><a href="#x">よくある質問</a></li>
+          <li><a href="#x">採用情報</a></li>
+          <li><a href="#x">プライバシーポリシー</a></li>
+          <li><a href="#x">サイト環境について</a></li>
+          <li><a href="#x">サイトマップ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <small class="wrapper">2024 &copy;Mainichi Hospital All rights reserved.</small>
+  </footer>
+</body>
+
+</html>
